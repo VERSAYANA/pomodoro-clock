@@ -1,0 +1,9 @@
+#timer-controls {
+  display: flex;
+  justify-content: center;
+}
+#timer-controls svg {
+  width: 32px;
+  height: 32px;
+  fill: black;
+}
