@@ -1,10 +1,10 @@
 import React from 'react';
 import './Length.css';
 
-const Length = () => {
+const Length = ({ title, value }) => {
   return (
     <section className="length">
-      <header>Session Length</header>
+      <header>{title} Length</header>
 
       <div className="length-actions">
         <span id="session-decrement">
@@ -12,7 +12,7 @@ const Length = () => {
             <path d="M19,13H5V11H19V13Z" />
           </svg>
         </span>
-        <span id="session-length">25</span>
+        <span id="session-length">{value}</span>
         <span id="session-increment">
           <svg viewBox="0 0 24 24">
             <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
