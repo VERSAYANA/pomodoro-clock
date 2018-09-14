@@ -1,0 +1,15 @@
+#timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: red;
+  height: 250px;
+  width: 250px;
+}
+#timer-label {
+}
+#time-left {
+  font-size: 40px;
+}
