@@ -28,12 +28,13 @@ const reducer = (state = initialState, action) => {
         ...state,
         breakLength: state.breakLength + 1,
       };
-
     case DECREMENT_BREAK:
       return {
         ...state,
         breakLength: state.breakLength - 1,
       };
+    default:
+      return state;
   }
 };
 
