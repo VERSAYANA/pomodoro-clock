@@ -18,3 +18,5 @@ const TimerControls = () => {
     </section>
   );
 };
+
+export default TimerControls;
