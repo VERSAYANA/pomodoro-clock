@@ -2,6 +2,9 @@
   display: flex;
   justify-content: center;
 }
+#timer-controls > div {
+  padding: 0 8px;
+}
 #timer-controls svg {
   width: 32px;
   height: 32px;
