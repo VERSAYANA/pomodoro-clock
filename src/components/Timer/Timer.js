@@ -15,7 +15,6 @@ Timer.propTypes = {
   paused: PropTypes.bool,
   timerLabel: PropTypes.string,
   timeLeft: PropTypes.string,
-  decrementTimeLeft: PropTypes.func,
 };
 
 export default Timer;
