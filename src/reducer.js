@@ -5,6 +5,7 @@ import {
   DECREMENT_BREAK,
   START_STOP,
   RESET_TIMER,
+  DECREMENT_TIMELEFT,
 } from './actionTypes';
 
 const initialState = {
@@ -22,6 +23,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         sessionLength: state.sessionLength + 1,
       };
+
     case DECREMENT_SESSION:
       return {
         ...state,
@@ -33,6 +35,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         breakLength: state.breakLength + 1,
       };
+
     case DECREMENT_BREAK:
       return {
         ...state,
@@ -57,6 +60,12 @@ const reducer = (state = initialState, action) => {
           timeLeft: state.breakLength * 60,
         };
       }
+
+    case DECREMENT_TIMELEFT:
+      return {
+        ...state,
+        timeLeft: state.timeLeft - 1,
+      };
 
     default:
       return state;
