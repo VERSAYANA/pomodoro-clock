@@ -3,11 +3,13 @@ import {
   DECREMENT_SESSION,
   INCREMENT_BREAK,
   DECREMENT_BREAK,
+  START_STOP,
 } from './actionTypes';
 
 const initialState = {
   sessionLength: 25,
   breakLength: 5,
+  paused: true,
 };
 
 const reducer = (state = initialState, action) => {
@@ -32,6 +34,12 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         breakLength: state.breakLength - 1,
+      };
+
+    case START_STOP:
+      return {
+        ...state,
+        paused: !state.paused,
       };
     default:
       return state;
