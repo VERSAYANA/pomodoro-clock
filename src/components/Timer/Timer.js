@@ -1,13 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Timer.css';
 
-const Timer = () => {
+const Timer = ({ timerLabel, timeLeft }) => {
   return (
     <section id="timer">
-      <span id="timer-label">Session</span>
-      <span id="time-left">25:00</span>
+      <span id="timer-label">{timerLabel}</span>
+      <span id="time-left">{timeLeft}</span>
     </section>
   );
+};
+
+Timer.propTypes = {
+  paused: PropTypes.bool,
+  timerLabel: PropTypes.string,
+  timeLeft: PropTypes.string,
+  decrementTimeLeft: PropTypes.func,
 };
 
 export default Timer;
