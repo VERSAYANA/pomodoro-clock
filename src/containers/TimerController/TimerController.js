@@ -1,8 +1,8 @@
 import React from 'react';
-import { decrementTimeLeft } from '../../actionCreators';
+import { decrementTimeLeft, timeOver } from '../../actionCreators';
 import { connect } from 'react-redux';
 
-class TimerStartStop extends React.Component {
+class TimerController extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,6 +25,9 @@ class TimerStartStop extends React.Component {
     if (!this.props.paused && prevProps.paused) {
       this.startTimer();
     }
+    if (this.props.timeLeft === 0) {
+      this.props.timeOver();
+    }
   }
 
   startTimer() {
@@ -40,15 +43,17 @@ class TimerStartStop extends React.Component {
 
 const mapStateToProps = (state) => ({
   paused: state.paused,
+  timeLeft: state.timeLeft,
 });
 
 const mapDispatchToProps = (dispatch) => ({
   decrementTimeLeft: () => dispatch(decrementTimeLeft()),
+  timeOver: () => dispatch(timeOver()),
 });
 
-TimerStartStop = connect(
+TimerController = connect(
   mapStateToProps,
   mapDispatchToProps,
-)(TimerStartStop);
+)(TimerController);
 
-export default TimerStartStop;
+export default TimerController;
