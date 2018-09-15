@@ -21,24 +21,36 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_SESSION:
+      if (state.sessionLength === 60) {
+        return state;
+      }
       return {
         ...state,
         sessionLength: state.sessionLength + 1,
       };
 
     case DECREMENT_SESSION:
+      if (state.sessionLength === 1) {
+        return state;
+      }
       return {
         ...state,
         sessionLength: state.sessionLength - 1,
       };
 
     case INCREMENT_BREAK:
+      if (state.breakLength === 60) {
+        return state;
+      }
       return {
         ...state,
         breakLength: state.breakLength + 1,
       };
 
     case DECREMENT_BREAK:
+      if (state.breakLength === 1) {
+        return state;
+      }
       return {
         ...state,
         breakLength: state.breakLength - 1,
