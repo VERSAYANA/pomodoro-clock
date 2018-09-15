@@ -25,7 +25,7 @@ class TimerController extends React.Component {
     if (!this.props.paused && prevProps.paused) {
       this.startTimer();
     }
-    if (this.props.timeLeft === 0) {
+    if (this.props.timeLeft < 0) {
       this.props.timeOver();
     }
   }
