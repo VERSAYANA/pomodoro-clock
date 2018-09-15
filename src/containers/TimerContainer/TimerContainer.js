@@ -5,8 +5,8 @@ import formatSecondsToMMSS from '../../modules/formatSecondsToMMSS';
 
 const mapStateToProps = (state) => ({
   paused: state.paused,
-  timerLabel: formatSecondsToMMSS(state.timerLabel),
-  timeLeft: state.timeLeft,
+  timerLabel: state.timerLabel,
+  timeLeft: formatSecondsToMMSS(state.timeLeft),
 });
 
 const mapDispatchToProps = (dispatch) => ({
