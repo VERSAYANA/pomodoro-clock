@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TimerWrapper from './components/TimerWrapper/TimerWrapper';
+import TimerContainer from './containers/TimerContainer/TimerContainer';
 import LengthContainer from './containers/LengthContainer/LengthContainer';
 import './App.css';
 
@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <LengthContainer title="Session" />
-        <TimerWrapper />
+        <TimerContainer />
         <LengthContainer title="Break" />
       </div>
     );
