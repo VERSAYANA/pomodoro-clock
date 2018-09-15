@@ -1,10 +1,11 @@
 import { connect } from 'react-redux';
 import { startStop, resetTimer, decrementTimeLeft } from '../../actionCreators';
 import TimerWrapper from '../../components/TimerWrapper/TimerWrapper';
+import formatSecondsToMMSS from '../../modules/formatSecondsToMMSS';
 
 const mapStateToProps = (state) => ({
   paused: state.paused,
-  timerLabel: state.timerLabel,
+  timerLabel: formatSecondsToMMSS(state.timerLabel),
   timeLeft: state.timeLeft,
 });
 
