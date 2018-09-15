@@ -3,6 +3,8 @@ import {
   DECREMENT_SESSION,
   INCREMENT_BREAK,
   DECREMENT_BREAK,
+  START_STOP,
+  RESET_TIMER,
 } from './actionTypes';
 
 export const incrementSession = () => ({
@@ -17,4 +19,11 @@ export const incrementBreak = () => ({
 });
 export const decrementBreak = () => ({
   type: DECREMENT_BREAK,
+});
+
+export const startStop = () => ({
+  type: START_STOP,
+});
+export const resetTimer = () => ({
+  type: RESET_TIMER,
 });
