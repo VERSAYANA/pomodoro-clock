@@ -6,6 +6,7 @@ import {
   START_STOP,
   RESET_TIMER,
   DECREMENT_TIMELEFT,
+  TIME_OVER,
 } from './actionTypes';
 
 const initialState = {
@@ -66,6 +67,22 @@ const reducer = (state = initialState, action) => {
         ...state,
         timeLeft: state.timeLeft - 1,
       };
+
+    case TIME_OVER:
+      if (state.timerLabel === 'Session') {
+        return {
+          ...state,
+          timerLabel: 'Break',
+          timeLeft: state.breakLength * 60,
+        };
+      } else if (state.timerLabel === 'Break') {
+        return {
+          ...state,
+          timerLabel: 'Session',
+          timeLeft: state.sessionLength * 60,
+        };
+      }
+      break;
 
     default:
       return state;
