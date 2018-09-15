@@ -11,12 +11,14 @@ const mapStateToProps = (state, ownProps) => {
   if (ownProps.title === 'Session') {
     return {
       value: state.sessionLength,
+      id: 'session',
     };
   }
 
   if (ownProps.title === 'Break') {
     return {
       value: state.breakLength,
+      id: 'break',
     };
   }
 };
