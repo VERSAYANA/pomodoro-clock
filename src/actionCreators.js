@@ -6,6 +6,7 @@ import {
   START_STOP,
   RESET_TIMER,
   DECREMENT_TIMELEFT,
+  TIME_OVER,
 } from './actionTypes';
 
 export const incrementSession = () => ({
@@ -31,4 +32,8 @@ export const resetTimer = () => ({
 
 export const decrementTimeLeft = () => ({
   type: DECREMENT_TIMELEFT,
+});
+
+export const timeOver = () => ({
+  type: TIME_OVER,
 });
