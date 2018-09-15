@@ -67,12 +67,18 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           timeLeft: state.sessionLength * 60,
+          sessionLength: 25,
+          breakLength: 5,
+          paused: true,
           audio: 'reset',
         };
       } else if (state.timerLabel === 'Break') {
         return {
           ...state,
           timeLeft: state.breakLength * 60,
+          sessionLength: 25,
+          breakLength: 5,
+          paused: true,
           audio: 'reset',
         };
       }
