@@ -12,7 +12,6 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   startStop: () => dispatch(startStop()),
   resetTimer: () => dispatch(resetTimer()),
-  decrementTimeLeft: () => dispatch(decrementTimeLeft()),
 });
 
 const TimerContainer = connect(

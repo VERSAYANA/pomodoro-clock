@@ -9,16 +9,10 @@ const TimerWrapper = ({
   timeLeft,
   startStop,
   resetTimer,
-  decrementTimeLeft,
 }) => {
   return (
     <section id="timer-wrapper">
-      <Timer
-        paused={paused}
-        timerLabel={timerLabel}
-        timeLeft={timeLeft}
-        decrementTimeLeft={decrementTimeLeft}
-      />
+      <Timer timerLabel={timerLabel} timeLeft={timeLeft} />
       <TimerControls
         paused={paused}
         startStop={startStop}
