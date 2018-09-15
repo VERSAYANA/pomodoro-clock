@@ -6,3 +6,5 @@ export const DECREMENT_BREAK = 'DECREMENT_BREAK';
 
 export const START_STOP = 'START_STOP';
 export const RESET_TIMER = 'RESET_TIMER';
+
+export const DECREMENT_TIMELEFT = 'DECREMENT_TIMELEFT';
