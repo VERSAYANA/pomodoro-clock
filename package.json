@@ -20,5 +20,6 @@
   },
   "devDependencies": {
     "push-dir": "^0.4.1"
-  }
+  },
+  "homepage": "http://VERSAYANA.github.io/pomodoro-clock"
 }
