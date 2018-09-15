@@ -15,7 +15,9 @@ const mapDispatchToProps = (dispatch) => ({
   decrementTimeLeft: () => dispatch(decrementTimeLeft()),
 });
 
-const TimerWrapper = connect(
+const TimerContainer = connect(
   mapStateToProps,
   mapDispatchToProps,
 )(TimerWrapper);
+
+export default TimerContainer;
