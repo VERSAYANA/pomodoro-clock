@@ -15,6 +15,7 @@ const initialState = {
   paused: true,
   timerLabel: 'Session',
   timeLeft: 1500,
+  audio: 'paused',
 };
 
 const reducer = (state = initialState, action) => {
@@ -54,11 +55,13 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           timeLeft: state.sessionLength * 60,
+          audio: 'reset',
         };
       } else if (state.timerLabel === 'Break') {
         return {
           ...state,
           timeLeft: state.breakLength * 60,
+          audio: 'reset',
         };
       }
       break;
@@ -74,12 +77,14 @@ const reducer = (state = initialState, action) => {
           ...state,
           timerLabel: 'Break',
           timeLeft: state.breakLength * 60,
+          audio: 'play',
         };
       } else if (state.timerLabel === 'Break') {
         return {
           ...state,
           timerLabel: 'Session',
           timeLeft: state.sessionLength * 60,
+          audio: 'play',
         };
       }
       break;
