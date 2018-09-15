@@ -1,6 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { timeOver } from '../../actionCreators';
 
 class BeepAudio extends React.Component {
   componentDidUpdate(prevProps) {

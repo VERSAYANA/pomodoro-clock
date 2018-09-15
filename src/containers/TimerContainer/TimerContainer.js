@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { startStop, resetTimer, decrementTimeLeft } from '../../actionCreators';
+import { startStop, resetTimer } from '../../actionCreators';
 import TimerWrapper from '../../components/TimerWrapper/TimerWrapper';
 import formatSecondsToMMSS from '../../modules/formatSecondsToMMSS';
 
