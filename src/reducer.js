@@ -24,6 +24,13 @@ const reducer = (state = initialState, action) => {
       if (state.sessionLength === 60) {
         return state;
       }
+      if (state.paused && state.timerLabel === 'Session') {
+        return {
+          ...state,
+          sessionLength: state.sessionLength + 1,
+          timeLeft: (state.sessionLength + 1) * 60,
+        };
+      }
       return {
         ...state,
         sessionLength: state.sessionLength + 1,
@@ -32,6 +39,13 @@ const reducer = (state = initialState, action) => {
     case DECREMENT_SESSION:
       if (state.sessionLength === 1) {
         return state;
+      }
+      if (state.paused && state.timerLabel === 'Session') {
+        return {
+          ...state,
+          sessionLength: state.sessionLength - 1,
+          timeLeft: (state.sessionLength - 1) * 60,
+        };
       }
       return {
         ...state,
@@ -42,6 +56,13 @@ const reducer = (state = initialState, action) => {
       if (state.breakLength === 60) {
         return state;
       }
+      if (state.paused && state.timerLabel === 'Break') {
+        return {
+          ...state,
+          breakLength: state.breakLength + 1,
+          timeLeft: (state.breakLength + 1) * 60,
+        };
+      }
       return {
         ...state,
         breakLength: state.breakLength + 1,
@@ -50,6 +71,13 @@ const reducer = (state = initialState, action) => {
     case DECREMENT_BREAK:
       if (state.breakLength === 1) {
         return state;
+      }
+      if (state.paused && state.timerLabel === 'Break') {
+        return {
+          ...state,
+          breakLength: state.breakLength - 1,
+          timeLeft: (state.breakLength - 1) * 60,
+        };
       }
       return {
         ...state,
@@ -63,26 +91,15 @@ const reducer = (state = initialState, action) => {
       };
 
     case RESET_TIMER:
-      if (state.timerLabel === 'Session') {
-        return {
-          ...state,
-          timeLeft: state.sessionLength * 60,
-          sessionLength: 25,
-          breakLength: 5,
-          paused: true,
-          audio: 'reset',
-        };
-      } else if (state.timerLabel === 'Break') {
-        return {
-          ...state,
-          timeLeft: state.breakLength * 60,
-          sessionLength: 25,
-          breakLength: 5,
-          paused: true,
-          audio: 'reset',
-        };
-      }
-      break;
+      return {
+        timeLeft: 1500,
+        sessionLength: 25,
+        breakLength: 5,
+        timerLabel: 'Session',
+        paused: true,
+        audio: 'reset',
+      };
+
     case DECREMENT_TIMELEFT:
       return {
         ...state,
