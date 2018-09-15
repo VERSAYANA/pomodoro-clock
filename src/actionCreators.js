@@ -5,6 +5,7 @@ import {
   DECREMENT_BREAK,
   START_STOP,
   RESET_TIMER,
+  DECREMENT_TIMELEFT,
 } from './actionTypes';
 
 export const incrementSession = () => ({
@@ -26,4 +27,8 @@ export const startStop = () => ({
 });
 export const resetTimer = () => ({
   type: RESET_TIMER,
+});
+
+export const decrementTimeLeft = () => ({
+  type: DECREMENT_TIMELEFT,
 });
