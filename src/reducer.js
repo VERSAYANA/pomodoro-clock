@@ -60,7 +60,7 @@ const reducer = (state = initialState, action) => {
           timeLeft: state.breakLength * 60,
         };
       }
-
+      break;
     case DECREMENT_TIMELEFT:
       return {
         ...state,
