@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import beep from '../../assets/beep.mp3';
 
 class BeepAudio extends React.Component {
   componentDidUpdate(prevProps) {
@@ -15,7 +16,7 @@ class BeepAudio extends React.Component {
     return (
       <audio
         id="beep"
-        src="https://goo.gl/65cBl1"
+        src={beep}
         ref={(audio) => {
           this.timeOverAudio = audio;
         }}
