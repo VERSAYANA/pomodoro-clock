@@ -15,7 +15,7 @@
   padding: 0 8px;
 }
 .length-actions svg {
-  fill: black;
+  fill: var(--primary-color);
   width: 24px;
   height: 24px;
 }

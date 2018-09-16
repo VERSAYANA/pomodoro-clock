@@ -8,5 +8,5 @@
 #timer-controls svg {
   width: 32px;
   height: 32px;
-  fill: black;
+  fill: var(--primary-color);
 }
