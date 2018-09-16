@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import './Length.css';
 
 const Length = ({ title, value, id, increment, decrement }) => {
@@ -23,6 +24,14 @@ const Length = ({ title, value, id, increment, decrement }) => {
       </div>
     </section>
   );
+};
+
+Length.propTypes = {
+  title: PropTypes.string,
+  value: PropTypes.number,
+  id: PropTypes.string,
+  increment: PropTypes.func,
+  decrement: PropTypes.func,
 };
 
 export default Length;
