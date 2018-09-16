@@ -12,7 +12,6 @@ const Timer = ({ timerLabel, timeLeft }) => {
 };
 
 Timer.propTypes = {
-  paused: PropTypes.bool,
   timerLabel: PropTypes.string,
   timeLeft: PropTypes.string,
 };
