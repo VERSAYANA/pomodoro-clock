@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
 
+.pause {
+  --primary-color: black;
+  --background-color: white;
+}
+.play {
+  --primary-color: white;
+  --background-color: black;
+}
+
 .App {
   height: 100%;
   font-size: 16px;
@@ -8,4 +17,6 @@
   flex-direction: column;
   justify-content: center;
   padding: 32px;
+  background-color: var(--background-color);
+  color: var(--primary-color);
 }
