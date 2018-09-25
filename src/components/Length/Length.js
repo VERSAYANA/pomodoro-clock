@@ -8,19 +8,19 @@ const Length = ({ title, value, id, increment, decrement }) => {
       <header id={`${id}-label`}>{`${title} Length`}</header>
 
       <div className="length-actions">
-        <span id={`${id}-decrement`} onClick={decrement}>
+        <button id={`${id}-decrement`} onClick={decrement}>
           <svg viewBox="0 0 24 24">
             <path d="M19,13H5V11H19V13Z" />
           </svg>
-        </span>
+        </button>
 
         <span id={`${id}-length`}>{value}</span>
 
-        <span id={`${id}-increment`} onClick={increment}>
+        <button id={`${id}-increment`} onClick={increment}>
           <svg viewBox="0 0 24 24">
             <path d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
           </svg>
-        </span>
+        </button>
       </div>
     </section>
   );

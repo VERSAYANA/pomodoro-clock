@@ -11,8 +11,12 @@
 .length-actions {
   display: flex;
 }
-.length-actions > span {
-  padding: 0 8px;
+.length-actions > button {
+  padding: 0 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 .length-actions svg {
   fill: var(--primary-color);
