@@ -2,8 +2,12 @@
   display: flex;
   justify-content: center;
 }
-#timer-controls > div {
+#timer-controls > button {
   padding: 0 8px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
 #timer-controls svg {
   width: 32px;

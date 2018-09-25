@@ -24,15 +24,15 @@ const TimerControls = ({ paused, startStop, resetTimer }) => {
 
   return (
     <section id="timer-controls">
-      <div id="start_stop" onClick={startStop}>
+      <button id="start_stop" onClick={startStop}>
         {playPauseIcon}
-      </div>
+      </button>
 
-      <div id="reset" onClick={resetTimer}>
+      <button id="reset" onClick={resetTimer}>
         <svg viewBox="0 0 24 24">
           <path d="M13,3A9,9 0 0,0 4,12H1L4.89,15.89L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3M12,8V13L16.28,15.54L17,14.33L13.5,12.25V8H12Z" />
         </svg>
-      </div>
+      </button>
     </section>
   );
 };
