@@ -3,19 +3,18 @@
 </p>
 <p>Screenshots:</p>
 <p style="text-align:center">
-  <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/1.png" width="85%" />
+  <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/1.png" width="85%" />
 </p>
-
 <p style="text-align:center">
   <tr>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/2.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/2.png" width="30%" />
     </th>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/3.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/3.png" width="30%" />
     </th>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/4.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/4.png" width="30%" />
     </th>
   </tr>
 </p>
@@ -23,13 +22,13 @@
 <p style="text-align:center">
   <tr>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/5.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/5.png" width="30%" />
     </th>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/6.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/6.png" width="30%" />
     </th>
     <th>
-      <img src="https://github.com/VERSAYANA/pomodoro-clock/blob/master/screenshots/7.png" width="30%" />
+      <img src="https://raw.githubusercontent.com/VERSAYANA/pomodoro-clock/master/screenshots/7.png" width="30%" />
     </th>
   </tr>
 </p>
